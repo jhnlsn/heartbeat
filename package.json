@@ -1,0 +1,32 @@
+{
+  "name": "jquery.heartbeat",
+  "title": "jQuery Heartbeat",
+  "description": "The best jQuery plugin ever.",
+  "version": "0.1.0",
+  "homepage": "https://github.com/jnelson/heartbeat",
+  "author": {
+    "name": "johnymonster",
+    "email": "jnelson11@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jnelson/heartbeat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jnelson/heartbeat/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/jnelson/heartbeat/blob/master/LICENSE-MIT"
+    },
+    {
+      "type": "GPL",
+      "url": "https://github.com/jnelson/heartbeat/blob/master/LICENSE-GPL"
+    }
+  ],
+  "dependencies": {
+    "jquery": "~1.7.2"
+  },
+  "keywords": []
+}

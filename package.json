@@ -1,7 +1,7 @@
 {
-  "name": "jquery.heartbeat",
-  "title": "jQuery Heartbeat",
-  "description": "The best jQuery plugin ever.",
+  "name": "heartbeat",
+  "title": "Heartbeat",
+  "description": "A generic heartbeat plugin.",
   "version": "0.1.0",
   "homepage": "https://github.com/jnelson/heartbeat",
   "author": {

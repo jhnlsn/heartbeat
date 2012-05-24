@@ -9,6 +9,11 @@ var HeartBeat = {};
     HeartBeat = function(options) {
         var self = this;
         this.options = $.extend(true,{},this._options,options);
+
+        if(this.options.type === 'ga') {
+            window._gaq = window._gaq || [];
+        }
+        this.init();
         if(this.options.autostart === true) {
             this.start();
         }
@@ -22,15 +27,14 @@ var HeartBeat = {};
         },
         types : {
             ga : {
-                event : function() {
-                    _gaq = _gaq || [];
-                    return _gaq.push;
+                beat : function(arr) {
+                    window._gaq.push(arr);
                 }
             }
         },
         init : function() {
             if(typeof this.types[this.options.type] !== 'undefined') {
-                this.options.event = this.types[this.options.type].event();
+                this.options.event = this.types[this.options.type];
             }
         },
         start : function() {
@@ -48,8 +52,8 @@ var HeartBeat = {};
             }
         },
         event : function() {
-            if(this._isFunction(this.options.event)) {
-                this.options.event.apply(this,[this.options.eventArgs]);
+            if(this._isFunction(this.options.event.beat)) {
+                this.options.event.beat.apply(this,[this.options.eventArgs]);
             } else {
                 this.stop();
                 return false;

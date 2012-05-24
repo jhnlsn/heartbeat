@@ -50,7 +50,16 @@
 
     test('gaq is array',1,function() {
         var hb = new HeartBeat();
-        ok(_.isFunction(hb.types.ga.event), 'The ga event return is a function');
+        ok(_.isFunction(hb.types.ga.beat), 'ga.beat is a function');
     });
 
+    test('one _gaq element in array',2, function(){
+        var hb = new HeartBeat({
+            eventArgs : ['_trackEvent']
+        });
+        hb.start();
+        hb.stop();
+        ok(typeof hb.int === 'undefined', 'Heart Beat is not running');
+        equal(_gaq.length,1,'There is only one item in _gaq');
+    });
 }(jQuery));

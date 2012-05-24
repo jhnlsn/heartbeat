@@ -30,14 +30,12 @@ var HeartBeat = {};
             type : 'ga'
         },
         types : {
-            ga : {
-                beat : function(arr) {
-                    window._gaq.push(arr);
-                }
+            ga : function(arr) {
+                window._gaq.push(arr);
             }
         },
         init : function() {
-            if(typeof this.types[this.options.type] !== 'undefined' && typeof this.options.event === 'undefined') {
+            if(this._isFunction(this.types[this.options.type]) && typeof this.options.event === 'undefined') {
                 this.options.event = this.types[this.options.type];
             }
         },
@@ -56,8 +54,8 @@ var HeartBeat = {};
             }
         },
         event : function() {
-            if(this._isFunction(this.options.event.beat)) {
-                this.options.event.beat.apply(this,[this.options.eventArgs]);
+            if(this._isFunction(this.options.event)) {
+                this.options.event.apply(this,[this.options.eventArgs]);
             } else {
                 this.stop();
                 return false;

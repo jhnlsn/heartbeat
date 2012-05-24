@@ -17,9 +17,12 @@ In your web page:
 var hb = new HeartBeat({
     interval : 1000, // milliseconds between heartbeat events
     autostart : true, // autostart true | false
-    event : function() {
-        // custom heartbeat function
+    event : {
+        beat: function() {
+            // custom beat function
+        }
     }
+
 });
 </script>
 ```

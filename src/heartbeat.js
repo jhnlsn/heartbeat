@@ -37,7 +37,7 @@ var HeartBeat = {};
             }
         },
         init : function() {
-            if(typeof this.types[this.options.type] !== 'undefined') {
+            if(typeof this.types[this.options.type] !== 'undefined' && typeof this.options.event === 'undefined') {
                 this.options.event = this.types[this.options.type];
             }
         },

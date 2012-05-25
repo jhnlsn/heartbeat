@@ -50,7 +50,7 @@
 
     test('gaq is array',1,function() {
         var hb = new HeartBeat();
-        ok(_.isFunction(hb.types.ga), 'ga.beat is a function');
+        ok(_.isFunction(hb.types.ga), 'ga is a function');
     });
 
     test('one _gaq element in array',2, function(){

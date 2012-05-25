@@ -16,7 +16,7 @@ In your web page:
 <script>
 var hb = new HeartBeat({
     interval : 1000, // milliseconds between heartbeat events
-    autostart : true, // autostart true | false
+    autostart : false, // autostart true | false (default)
     event : function(arr) {
         window._gaq.push(arr); // custom beat function
     }
@@ -28,7 +28,23 @@ var hb = new HeartBeat({
 _(Coming soon)_
 
 ## Examples
-_(Coming soon)_
+
+### Delayed start
+
+var hb = new HeartBeat({
+    autostart: false
+});
+
+...
+
+hb.start();
+
+...
+
+hb.stop();
+
+###
+
 
 ## Contributing
 In lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt](https://github.com/cowboy/grunt).

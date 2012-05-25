@@ -5,8 +5,8 @@ A generic heartbeat plugin for firing events on a set interval.
 ## Getting Started
 Download the [production version][min] or the [development version][max].
 
-[min]: https://raw.github.com/jnelson/heartbeat/master/dist/heartbeat.min.js
-[max]: https://raw.github.com/jnelson/heartbeat/master/dist/heartbeat.js
+[min]: https://raw.github.com/johnymonster/heartbeat/master/dist/heartbeat.min.js
+[max]: https://raw.github.com/johnymonster/heartbeat/master/dist/heartbeat.js
 
 In your web page:
 

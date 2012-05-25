@@ -78,8 +78,13 @@ var HeartBeat = {};
         running : function() {
             return int !== false;
         },
+        option : function(option) {
+            $.extend(this.options,option);
+            return self;
+        },
         beats : function() {
             return beats;
+            return self;
         }
     };
 }(jQuery, window));
